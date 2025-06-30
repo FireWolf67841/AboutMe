@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Giovani's Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #1e1e2f;
+      color: #fff;
+      padding: 25px 0;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    nav {
+      background-color: #2e2e42;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      color: #00bfa6;
+    }
+
+    main {
+      padding: 30px 15px;
+    }
+
+    section {
+      display: none;
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      margin-bottom: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h2 {
+      text-align: center;
+      color: #1e1e2f;
+      margin-bottom: 20px;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .button-container button {
+      padding: 12px 25px;
+      background-color: #00bfa6;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      margin: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .button-container button:hover {
+      background-color: #009f8a;
+    }
+
+    footer {
+      background-color: #1e1e2f;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .service-item {
+      margin-bottom: 20px;
+    }
+
+    .service-item span {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 5px;
+      color: #00bfa6;
+    }
+
+    a {
+      color: #00bfa6;
+    }
+
+    /* Custom Cursor: Dot + Shark Emoji */
+    #cursor-dot, #cursor-shark {
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+    }
+
+    #cursor-dot {
+      width: 8px;
+      height: 8px;
+      background-color: black;
+      border-radius: 50%;
+    }
+
+    #cursor-shark {
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Welcome to Giovani's Website</h1>
+</header>
+
+<nav>
+  <a onclick="showSection('home')">Home</a>
+  <a onclick="showSection('about')">About</a>
+  <a onclick="showSection('services')">Services</a>
+  <a onclick="showSection('contact')">Contact</a>
+</nav>
+
+<main>
+  <section id="home" class="active">
+    <h2>Home</h2>
+    <p>Hello, welcome to my webpage. I'm so glad you made it! Below are some sections where you can learn more about me, my services, and how to contact me.</p>
+    <div class="button-container">
+      <button onclick="showSection('about')">About Me</button>
+      <button onclick="showSection('services')">My Services</button>
+      <button onclick="showSection('contact')">Contact Me</button>
+      <a href="https://www.linkedin.com/in/giovani-stinson-a12a32258/" target="_blank">
+        <button>My LinkedIn Page</button>
+      </a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p><strong>Certification:</strong> Google IT Support Professional Certified ✅</p>
+    <p>My name is <strong>Giovani</strong>, and I am an IT professional with a passion for diagnosing and resolving computer issues. I became fascinated with technology during a time in Cuba without internet access, which pushed me to understand computers deeply—from hardware to networks. That journey turned into a career I'm deeply passionate about.</p>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <div class="service-item"><span>Network Setup & Configuration</span> LAN/WAN, Wi-Fi, and VPN setup for homes and businesses.</div>
+    <div class="service-item"><span>Computer Hardware Services</span> Custom PC builds, diagnostics, repairs, and upgrades.</div>
+    <div class="service-item"><span>Software Solutions</span> OS installs, app optimization, and troubleshooting.</div>
+    <div class="service-item"><span>Virus & Malware Protection</span> Scanning, removal, and future-proofing security tools.</div>
+    <div class="service-item"><span>Driver Updates</span> Full driver installs, updates, and compatibility checks.</div>
+    <div class="service-item"><span>Computer Repair</span> Complete diagnostics for speed issues or crashes.</div>
+    <div class="service-item"><span>Data Backup & Recovery</span> Peace-of-mind solutions for data protection and retrieval.</div>
+    <div class="service-item"><span>IT Consulting</span> Strategic tech guidance for business infrastructure.</div>
+    <div class="service-item"><span>Remote Support</span> Real-time help via phone or video call.</div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p><strong>Name:</strong> Giovani</p>
+    <p><strong>Phone:</strong> <a href="tel:+16502484302">650-248-4302</a></p>
+    <p><strong>Email:</strong> <a href="mailto:firewolf3r@gmail.com">firewolf3r@gmail.com</a></p>
+    <p>If you're interested in working together or have questions, feel free to reach out!</p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Giovani. All rights reserved.</p>
+</footer>
+
+<!-- Cursor Elements -->
+<div id="cursor-dot"></div>
+<div id="cursor-shark">🦈</div>
+
+<script>
+  function showSection(id) {
+    document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+  }
+
+  const dot = document.getElementById('cursor-dot');
+  const shark = document.getElementById('cursor-shark');
+
+  let mouseX = 0, mouseY = 0;
+  let dotX = 0, dotY = 0;
+  let sharkX = 0, sharkY = 0;
+
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  function animateCursor() {
+    dotX += (mouseX - dotX) * 0.25;
+    dotY += (mouseY - dotY) * 0.25;
+    sharkX += (mouseX - sharkX) * 0.1;
+    sharkY += (mouseY - sharkY) * 0.1;
+
+    dot.style.transform = `translate3d(${dotX}px, ${dotY}px, 0)`;
+    shark.style.transform = `translate3d(${sharkX}px, ${sharkY}px, 0)`;
+
+    requestAnimationFrame(animateCursor);
+  }
+
+  animateCursor();
+</script>
+
+</body>
+</html>
